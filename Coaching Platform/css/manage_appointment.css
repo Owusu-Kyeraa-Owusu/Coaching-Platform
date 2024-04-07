@@ -1,0 +1,87 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #cad7fda4;;
+    color: rgb(47, 141, 70);;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%; /* Set width to 100% */
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    padding: 0; /* Remove padding */
+}
+
+/* Calendar Styles */
+.calendar {
+    flex: 1;
+    margin-right: 20px;
+}
+
+/* Appointments Styles */
+.appointments {
+    flex: 2;
+}
+
+.appointments h2 {
+    color: #333;
+}
+
+table {
+    width: 100vw; /* Set width to 100% of viewport width */
+    border-collapse: collapse;
+}
+
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+.back-link {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    text-decoration: none;
+    color: #333;
+}
+
+.back-link:hover {
+    color: #13273e;
+}
+
+
+.actions a {
+    margin-right: 5px;
+    color: #cad7fda4;;
+    text-decoration: none;
+}
+
+.book-appointment {
+    display: block;
+    margin-top: 20px; /* Move down the link */
+    margin-bottom: 20px; /* Add margin bottom */
+    margin-left: 1100px; /* Move to the right */
+    color: #fff;
+    background-color: #cad7fda4;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    width: 150px;
+    border-radius: 5px;
+}
+
+.book-appointment:hover {
+    background-color: #4ca2cd;
+}

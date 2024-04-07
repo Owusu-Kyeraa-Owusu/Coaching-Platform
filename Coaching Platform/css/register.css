@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    height: 200vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #cad7fda4;
+}
+
+
+/* Container styles */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 500px;
+}
+
+/* Form styles */
+.forms {
+    width: 400px;
+}
+
+.form {
+    background-color: #f5f5f5;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.input-field {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-field input, 
+.input-field select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.input-field input:focus, 
+.input-field select:focus {
+    border-color: #cad7fda4;
+}
+
+.input-field .icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+
+.checkbox-text {
+    margin-bottom: 20px;
+}
+
+.checkbox-content label {
+    display: inline-block;
+    font-size: 14px;
+}
+
+.button input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #9aafefa4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    font-size: 16px;
+}
+
+.button input[type="submit"]:hover {
+    background-color: #9aafefa4;
+}
+
+.login-signup {
+    text-align: center;
+}
+
+.login-signup .text {
+    font-size: 14px;
+}
+
+.login-signup .login-link {
+    color: #9aafefa4;;
+    text-decoration: none;
+}
+
+
+.input-field i{
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 20px;
+    transition: all 0.2s ease;
+}
+
+.input-field input:is(:focus, :valid) ~ i{
+    color: #cad7fda4;
+}
+
+.input-field i.icon{
+    right: 0;
+}
+.input-field i.showHidePw{
+    right: 0;
+    cursor: pointer;
+    padding: 10px;
+}

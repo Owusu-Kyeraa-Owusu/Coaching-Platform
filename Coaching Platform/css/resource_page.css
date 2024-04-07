@@ -1,0 +1,90 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Use border-box to include padding and border in element's total width and height */
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    position: relative; /* Set container position to relative */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin: 0;
+}
+
+.back-link {
+    text-decoration: none;
+    color: #333;
+}
+
+#resourceContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.resource {
+    width: calc(50% - 20px); /* Set resource width to 50% minus margin */
+    margin: 10px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    position: relative;
+}
+
+.resource h2 {
+    margin-top: 0;
+}
+
+.resource p {
+    margin-bottom: 10px;
+}
+
+.resource input[type="file"] {
+    margin-bottom: 10px;
+}
+
+.resource button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.resource button:hover {
+    background-color: #0056b3;
+}
+
+.add-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-button:hover {
+    background-color: #218838;
+}
