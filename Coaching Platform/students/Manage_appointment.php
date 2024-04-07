@@ -30,9 +30,11 @@
                 </thead>
                 <tbody>
                     <?php
-                    //include("../actions/fetch_current_appointments.php");
-                    // include("../actions/delete_appointments.php");
-                    // include("../actions/edit_appointment.php");
+                    include("../actions/fetch_current_appointments.php");
+                    include("../actions/delete_appointments.php");
+                    include("../actions/edit_appointment.php");
+                    
+                    
                     ?>
                 </tbody>
             </table>
@@ -48,9 +50,29 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <?php
-                     include("../actions/students_completed_appointment.php");
+                <?php
+               include("../actions/fetch_past_appointments.php");
+                    // Fetch past appointments from the database
+                    $sql_past_appointments = "SELECT * FROM past_appointment";
+                    $result_past_appointments = $conn->query($sql_past_appointments);
+
+                    // Check if there are past appointments
+                    if ($result_past_appointments->num_rows > 0) {
+                        // Output data of each row
+                        while ($row_past_appointment = $result_past_appointments->fetch_assoc()) {
+                            echo "<tr>";
+                            echo "<td>" . $row_past_appointment["appointment_id"] . "</td>";
+                            echo "<td>" . $row_past_appointment["coach"] . "</td>";
+                            echo "<td>" . $row_past_appointment["date"] . "</td>";
+                            echo "<td>" . $row_past_appointment["time"] . "</td>";
+                            echo "<td> Actions </td>"; // You can add action buttons here
+                            echo "</tr>";
+                        }
+                    } else {
+                        echo "<tr><td colspan='5'>No past appointments</td></tr>";
+                    }
                     ?>
+                </tbody>
                 </tbody>
             </table>
         </div>
